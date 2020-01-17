@@ -1,56 +1,6 @@
-﻿@model IEnumerable<MvcDemo.Models.PersonModel>
+﻿
 @{
-    ViewBag.Title = "ListofPerson";
+    ViewBag.Title = "Index view from Person";
 }
 
 <h2>This is the deafult person view</h2>
-
-<div>
-    @Html.ActionLink("Create New ", "Create")
-</div>
-
-<table class=" table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName);
-
-        </th>
-
-        <th>
-            @Html.DisplayNameFor(model => model.LastName);
-
-        </th>
-
-        <th>
-            @Html.DisplayNameFor(model => model.Age);
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsAlive);
-        </th>
-    </tr>
-
-    @foreach(var item in Model)
-    {
-
-<tr>
-    <td>
-        @Html.DisplayFor(ModelItem => item.FirstName);
-    </td>
-    <td>
-        @Html.DisplayFor(ModelItem => item.LastName);
-    </td>
-    <td>
-        @Html.DisplayFor(ModelItem => item.Age);
-    </td>
-    <td>
-        @Html.DisplayFor(ModelItem => item.IsAlive);
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { /* id=item.primarykey */})
-        @Html.ActionLink("Details", "Details", new { /* id=item.primarykey */})
-        @Html.ActionLink("Delete", "Delete", new { /* id=item.primarykey */})
-
-    </td>
-</tr>
-    }
-</table>
